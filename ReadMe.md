@@ -4,6 +4,7 @@
 - `npm install cypress`
 - `npx cypress open` to open the Cypress studio tool or
 - `npx cypress run` to just run the tests
+- `npx cypress run --browser firefox` run the tests using firefox
 - selected End-to-End with chrome
 - created a test file from scratch
 
