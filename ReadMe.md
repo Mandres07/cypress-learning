@@ -24,4 +24,6 @@
 - `cy.get('[data-cy="contact-input-email"]').focus()`: focuses on an input
 - `cy.get('[data-cy="contact-input-email"]').blur()`: blur an input
 - `cy.screenshot()`: take an screenshot in the place and time you want
+
 ## Running Cypress without Cypress Studio
+using the command: `npx cypress run` you can run all cypress tests without opening the Cypress Studio
