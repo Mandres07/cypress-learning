@@ -24,6 +24,11 @@
 - `cy.get('[data-cy="contact-input-email"]').focus()`: focuses on an input
 - `cy.get('[data-cy="contact-input-email"]').blur()`: blur an input
 - `cy.screenshot()`: take an screenshot in the place and time you want
+- `cy.stub([object], '[function name]]').as('[alias]');`: stub replaces a function code to anything you want
+- `cy.fixture('user-location.json');`: accesses a json file located in fixtures folder inside cypress, that contains defined dummy data
+- `cy.spy(window.localStorage, 'setItem').as('storeLocation');`: set a listener to not changes function just to see if it was called
+- `cy.clock();`: indicates that you are going to manipulate the time, must be called beforeEach test
+- `cy.tick(2000);`: indicates to advacne 2000 ms in time
 
 ## Running Cypress without Cypress Studio
 using the command: `npx cypress run` you can run all cypress tests without opening the Cypress Studio
