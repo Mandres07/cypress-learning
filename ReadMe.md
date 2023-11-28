@@ -29,6 +29,11 @@
 - `cy.spy(window.localStorage, 'setItem').as('storeLocation');`: set a listener to not changes function just to see if it was called
 - `cy.clock();`: indicates that you are going to manipulate the time, must be called beforeEach test
 - `cy.tick(2000);`: indicates to advacne 2000 ms in time
+- `cy.intercept([http verb],[url]);`: intercepts http request to the provided url
+- `cy.intercept('POST', '/newsletter*', { status: 201 }).as('subscribe')`: creates a response dummy data to the request and also creates an alias for the interceptor
+- `cy.wait('@subscribe');`: waits for an interceptor to finish to continue
+- ` cy.request([request object]).then()`: sends a request without using the UI. You can make assertions within the then method
+- `cy.getCookie('[cookie name]').its('[cookie field]').should('not.be.empty');`: gets a cookie by name and then some of its fields to make assertions
 
 ## Running Cypress without Cypress Studio
 using the command: `npx cypress run` you can run all cypress tests without opening the Cypress Studio
